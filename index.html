@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pierre Porter | MR. OH LAWWDDD – Official Creator Hub</title>
+    <meta name="description"
+        content="Official hub for Mr. Oh Lawd (Pierre Porter). Viral lifestyle critic, food reviewer, and culture curator specializing in high-energy reviews of cabins, hotels, nightlife, and culinary gems." />
+    <meta name="keywords"
+        content="Lifestyle Critic, Cabin Reviews, Hotel Influencer, Nightlife Curator, Pierre Porter, Mr Oh Lawd, Food Reviewer, Travel Creator" />
+    <meta property="og:title" content="Pierre Porter | MR. OH LAWD – Lifestyle, Food & Culture" />
+    <meta property="og:description"
+        content="50M+ views. From viral food reacts to premium cabin getaways and nightlife. The official home of Pierre Porter." />
+    <meta property="og:image" content="./pierre-headshot.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+       NAV
+  ============================================================ -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-logo">
+            <a href="#hero"><span class="nav-logo-text">PIERRE PORTER<span class="accent-red"> REVIEWS</span></span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#bio">Story</a></li>
+
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#partnerships">Brands</a></li>
+            <li><a href="#contact" class="nav-cta">Book Now</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+        <ul>
+            <li><a href="#hero" class="mobile-link">Home</a></li>
+            <li><a href="#videos" class="mobile-link">Videos</a></li>
+            <li><a href="#bio" class="mobile-link">Story</a></li>
+
+            <li><a href="#stats" class="mobile-link">Stats</a></li>
+            <li><a href="#partnerships" class="mobile-link">Brands</a></li>
+            <li><a href="#contact" class="mobile-link cta">Book Now</a></li>
+        </ul>
+    </div>
+
+    <!-- ============================================================
+       SECTION 1 — HERO
+  ============================================================ -->
+    <section id="hero" class="hero-section">
+        <!-- Video Background -->
+        <div class="hero-video-wrap">
+            <div class="hero-video-overlay"></div>
+            <!-- Food BG image as fallback / base layer -->
+            <img src="./food-bg.png" alt="Food background" class="hero-food-bg" loading="eager" />
+            <div class="hero-noise"></div>
+        </div>
+
+        <div class="hero-content">
+            <!-- Left: Text -->
+            <div class="hero-text" data-animate="fade-up">
+                <div class="hero-tag">
+                    <span class="dot pulse-red"></span> LIVE &amp; UNFILTERED
+                </div>
+                <h1 class="hero-name">PIERRE<br /><span class="hero-name-porter">PORTER</span></h1>
+                <div class="hero-catchphrase-wrap">
+                    <div class="hero-catchphrase-label">A.K.A.</div>
+                    <div class="hero-catchphrase-text">MR. OH<br /><span class="hero-lawddd">LAWD</span></div>
+                    <div class="hero-catchphrase-sub">The Voice of Premium Experiences from Viral Bites and Hidden
+                        Cabins to Amusement Parks, Nightlife, and Elite Lounges.</div>
+                </div>
+                <p class="hero-sub">LIFESTYLE ARCHITECT &bull; TRAVEL &amp; FOOD CRITIC &bull; NIGHTLIFE CURATOR</p>
+
+
+                <!-- BOOKING CTA -->
+                <div class="hero-collab-cta">
+                    <a href="#contact" class="hero-collab-btn" id="heroBookBtn">
+                        <span class="collab-icon">🤝</span>
+                        <span class="collab-text">
+                            <span class="collab-label">READY TO GO VIRAL?</span>
+                            <span class="collab-main">BOOK PIERRE FOR COLLABS</span>
+                        </span>
+                        <span class="collab-arrow">→</span>
+                    </a>
+                    <div class="collab-trust">
+                        <span class="dot pulse-gold"></span>
+                        <span>Brand partners respond within 24 hrs</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#videos" class="hero-btn-primary">EXPLORE THE VIBE</a>
+                    <a href="#contact" class="hero-btn-secondary">BOOK A COLLAB</a>
+                </div>
+            </div>
+
+            <!-- Right: Headshot -->
+            <div class="hero-image-wrap" data-animate="fade-in">
+                <div class="hero-glow-ring"></div>
+                <img src="./pierre-real.jpg" alt="Pierre Porter – Mr. Oh Lawd" class="hero-headshot" />
+                <div class="hero-badge-views">
+                    <span class="badge-num">50M+</span>
+                    <span class="badge-label">VIEWS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION 2 — THE REEL DEAL
+  ============================================================ -->
+    <section id="videos" class="section videos-section">
+        <div class="section-header" data-animate="fade-up">
+            <div class="section-tag">LATEST EXPERIENCES</div>
+            <h2 class="section-title">THE REEL<span class="accent-red"> DEAL</span></h2>
+            <p class="section-sub">Food. Travel. Nightlife. Real reactions across every premium experience.</p>
+        </div>
+
+        <div class="reel-grid" id="reelGrid">
+
+            <!-- 1 — Leisure Lake Resort -->
+            <div class="reel-card" data-animate="fade-up" data-delay="0">
+                <div class="reel-embed-box">
+                    <iframe src="https://www.instagram.com/reel/DDfbFfLxcaX/embed/" class="reel-iframe" loading="lazy"
+                        frameborder="0" scrolling="no" allowtransparency="true" allow="autoplay; encrypted-media"
+                        title="Hidden Gem Alert: The Ultimate Leisure Lake Resort Vibe.">
+                    </iframe>
+                    <div class="reel-top-banner">
+                        <div class="reel-badge lifestyle">🏠 TRAVEL</div>
+                        <span class="reel-banner-tag">TRAVEL</span>
+                    </div>
+                    <div class="reel-mask"></div>
+                    <a href="https://www.instagram.com/reel/DDfbFfLxcaX/" target="_blank" rel="noopener"
+                        class="reel-tap-layer" aria-label="Watch on Instagram"></a>
+                </div>
+                <div class="reel-cap-bar">
+                    <p class="reel-cap-text">Mansion Resort in the Poconos: Leisure Lake Resort Short Term Rentals.
+                        Scotrun, PA. <span class="reel-hashtag">#TravelReviews</span></p>
+                </div>
+            </div>
+
+            <!-- 2 — Nightlife Vibes -->
+            <div class="reel-card" data-animate="fade-up" data-delay="80">
+                <div class="reel-embed-box">
+                    <iframe src="https://www.instagram.com/p/DSnk0r7kXq5/embed/" class="reel-iframe" loading="lazy"
+                        frameborder="0" scrolling="no" allowtransparency="true" allow="autoplay; encrypted-media"
+                        title="Premium Nightlife Vibes: Curating the City's Most Exclusive After-Hours Scene.">
+                    </iframe>
+                    <div class="reel-top-banner">
+                        <div class="reel-badge trending">� CULINARY</div>
+                        <span class="reel-banner-tag">CULINARY</span>
+                    </div>
+                    <div class="reel-mask"></div>
+                    <a href="https://www.instagram.com/p/DSnk0r7kXq5/" target="_blank" rel="noopener"
+                        class="reel-tap-layer" aria-label="Watch on Instagram"></a>
+                </div>
+                <div class="reel-cap-bar">
+                    <p class="reel-cap-text">Viral Soul Comfort Food: Worth the 4-hour drive from NYC to Baltimore.
+                        <span class="reel-hashtag">#SoulFood</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3 — Seafood / Sushi -->
+            <div class="reel-card" data-animate="fade-up" data-delay="160">
+                <div class="reel-embed-box">
+                    <iframe src="https://www.instagram.com/reel/DFN1ulPxEAU/embed/" class="reel-iframe" loading="lazy"
+                        frameborder="0" scrolling="no" allowtransparency="true" allow="autoplay; encrypted-media"
+                        title="Seafood Excellence: Breaking Down the Best Sushi &amp; Crab.">
+                    </iframe>
+                    <div class="reel-top-banner">
+                        <div class="reel-badge culture">� CULINARY</div>
+                        <span class="reel-banner-tag">CULINARY</span>
+                    </div>
+                    <div class="reel-mask"></div>
+                    <a href="https://www.instagram.com/reel/DFN1ulPxEAU/" target="_blank" rel="noopener"
+                        class="reel-tap-layer" aria-label="Watch on Instagram"></a>
+                </div>
+                <div class="reel-cap-bar">
+                    <p class="reel-cap-text">Best All You Can Eat Seafood &amp; Sushi for $22 at Umi Premium Buffet.
+                        <span class="reel-hashtag">#Foodie</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 4 — Nightlife -->
+            <div class="reel-card" data-animate="fade-up" data-delay="40">
+                <div class="reel-embed-box">
+                    <iframe src="https://www.instagram.com/reel/CymR--kLrfA/embed/" class="reel-iframe" loading="lazy"
+                        frameborder="0" scrolling="no" allowtransparency="true" allow="autoplay; encrypted-media"
+                        title="Nightlife Curator: The Best After-Hours Spots in the City.">
+                    </iframe>
+                    <div class="reel-top-banner">
+                        <div class="reel-badge culture">🇯� NIGERIAN-JAMAICAN</div>
+                        <span class="reel-banner-tag">NIGERIAN-JAMAICAN</span>
+                    </div>
+                    <div class="reel-mask"></div>
+                    <a href="https://www.instagram.com/reel/CymR--kLrfA/" target="_blank" rel="noopener"
+                        class="reel-tap-layer" aria-label="Watch on Instagram"></a>
+                </div>
+                <div class="reel-cap-bar">
+                    <p class="reel-cap-text">Upscale Fusion: Eko Restaurant NYC. New Landmark in Brooklyn, NY. <span
+                            class="reel-hashtag">#FusionFood</span></p>
+                </div>
+            </div>
+
+            <!-- 5 — Luxury Hotel -->
+            <div class="reel-card" data-animate="fade-up" data-delay="120">
+                <div class="reel-embed-box">
+                    <iframe src="https://www.instagram.com/reel/DP8_YCvkZfc/embed/" class="reel-iframe" loading="lazy"
+                        frameborder="0" scrolling="no" allowtransparency="true" allow="autoplay; encrypted-media"
+                        title="Hotel Check-In: Inside the Most Exclusive Suite.">
+                    </iframe>
+                    <div class="reel-top-banner">
+                        <div class="reel-badge culture">🌍 AFRICAN</div>
+                        <span class="reel-banner-tag">AFRICAN</span>
+                    </div>
+                    <div class="reel-mask"></div>
+                    <a href="https://www.instagram.com/reel/DP8_YCvkZfc/" target="_blank" rel="noopener"
+                        class="reel-tap-layer" aria-label="Watch on Instagram"></a>
+                </div>
+                <div class="reel-cap-bar">
+                    <p class="reel-cap-text">Authentic Vibes: Yop City Restaurant NYC. African Food Excellence. <span
+                            class="reel-hashtag">#AfricanFood</span></p>
+                </div>
+            </div>
+
+            <!-- 6 — Oh Lawd Classic -->
+            <div class="reel-card" data-animate="fade-up" data-delay="200">
+                <div class="reel-embed-box">
+                    <iframe src="https://www.instagram.com/reel/DKPlMIot3By/embed/" class="reel-iframe" loading="lazy"
+                        frameborder="0" scrolling="no" allowtransparency="true" allow="autoplay; encrypted-media"
+                        title="Classic Mr. Oh Lawd: The Reaction That Started It All.">
+                    </iframe>
+                    <div class="reel-top-banner">
+                        <div class="reel-badge trending">🍗 CULINARY</div>
+                        <span class="reel-banner-tag">CULINARY</span>
+                    </div>
+                    <div class="reel-mask"></div>
+                    <a href="https://www.instagram.com/reel/DKPlMIot3By/" target="_blank" rel="noopener"
+                        class="reel-tap-layer" aria-label="Watch on Instagram"></a>
+                </div>
+                <div class="reel-cap-bar">
+                    <p class="reel-cap-text">Brooklyn’s Best Wings: Trying Atomic Wings in Bed-Stuy. <span
+                            class="reel-hashtag">#Brooklyn</span></p>
+                </div>
+            </div>
+
+        </div><!-- /reel-grid -->
+
+        <div class="reel-cta-row" data-animate="fade-up">
+            <a href="https://www.instagram.com/iampierreporter/" target="_blank" rel="noopener" class="btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2" />
+                    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
+                    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+                </svg>
+                <span>FOLLOW ON INSTAGRAM</span>
+            </a>
+            <a href="#contact" class="btn-solid reel-partner-btn">
+                🤝 CONTENT PARTNERSHIPS →
+            </a>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+       SECTION 3 — QUICK BIO
+  ============================================================ -->
+    <section id="bio" class="section bio-section">
+        <div class="bio-grid">
+            <!-- Left: Image collage -->
+            <div class="bio-image-col" data-animate="fade-right">
+                <div class="bio-img-main">
+                    <img src="./food-bg.png" alt="Food x Music" class="bio-food-img" loading="lazy" />
+                    <div class="bio-img-tag">FOOD × MUSIC</div>
+                </div>
+                <div class="bio-img-small bio-img-s1">
+                    <div class="bio-img-placeholder"
+                        style="background: linear-gradient(135deg, #ff3333 0%, #cc0000 100%);">
+                        <span class="bio-emoji">🎵</span>
+                    </div>
+                </div>
+                <div class="bio-img-small bio-img-s2">
+                    <div class="bio-img-placeholder"
+                        style="background: linear-gradient(135deg, #ffd700 0%, #cc9900 100%);">
+                        <span class="bio-emoji">🍽️</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Copy -->
+            <div class="bio-text-col" data-animate="fade-left">
+                <div class="section-tag">THE STORY</div>
+                <h2 class="section-title">From the<br /><span class="accent-gold">Stage</span> to<br />the <span
+                        class="accent-red">World.</span></h2>
+                <div class="bio-body">
+                    <p>
+                        Pierre Porter didn't pick a lane — he <em>built his own road</em>.
+                        A classically trained musician, Pierre carried that same obsessive standard
+                        for excellence out of the studio and into every experience worth talking about.
+                    </p>
+                    <p>
+                        What started with unfiltered food reactions exploded into something the internet
+                        couldn't put down. But Pierre's lens has always been wider than the plate.
+                        Hidden cabin retreats. Rooftop nightlife. Boutique hotel stays.
+                        The <strong>vibe check</strong> travels wherever the culture is.
+                    </p>
+                    <p>
+                        <strong>50 million+ views later</strong>, Pierre is the internet's most trusted
+                        lifestyle voice — whether he's rating a $12 wing spot or a $1,200-a-night
+                        mountain escape. If it's a premium experience, Pierre's already been there
+                        — and told everyone about it.
+                    </p>
+                </div>
+                <div class="bio-tags">
+                    <span class="bio-tag-pill">🎵 Pro Musician</span>
+                    <span class="bio-tag-pill">🍽️ Food Critic</span>
+                    <span class="bio-tag-pill">🏨 Travel & Hotels</span>
+                    <span class="bio-tag-pill">🌙 Nightlife Curator</span>
+                    <span class="bio-tag-pill">📱 Viral Creator</span>
+                    <span class="bio-tag-pill">💯 100% Unfiltered</span>
+                </div>
+                <a href="#contact" class="btn-solid">WORK WITH PIERRE →</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+       SECTION 5 — VIRAL PROOF DASHBOARD
+  ============================================================ -->
+    <section id="stats" class="section stats-section">
+        <div class="stats-bg-grid" aria-hidden="true"></div>
+
+        <div class="section-header" data-animate="fade-up">
+            <div class="section-tag">THE NUMBERS</div>
+            <h2 class="section-title">VIRAL BY<br /><span class="accent-gold">DATA.</span></h2>
+            <p class="section-sub">Not a vanity metric in sight. Every number is earned — verified 2026 performance.</p>
+        </div>
+
+        <!-- Primary stat counters -->
+        <div class="stats-grid">
+            <div class="stat-card" data-animate="fade-up" data-delay="0">
+                <div class="stat-icon">👁</div>
+                <div class="stat-number" data-target="50000000" data-suffix="+">0</div>
+                <div class="stat-label">Cross-Platform Views &amp; Counting</div>
+                <div class="stat-sub-label">Total reach across all platforms, 2026</div>
+                <div class="stat-bar">
+                    <div class="stat-bar-fill" style="width:95%"></div>
+                </div>
+            </div>
+            <div class="stat-card" data-animate="fade-up" data-delay="100">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-number" data-target="2000000" data-suffix="+">0</div>
+                <div class="stat-label">Peak Reach Per Premium Review</div>
+                <div class="stat-sub-label">Consistent 1M+ views on top-performing Reels</div>
+                <div class="stat-bar">
+                    <div class="stat-bar-fill bar-gold" style="width:88%"></div>
+                </div>
+            </div>
+            <div class="stat-card" data-animate="fade-up" data-delay="200">
+                <div class="stat-icon">🇺🇸</div>
+                <div class="stat-number" data-target="62" data-suffix=".5%">0</div>
+                <div class="stat-label">USA-Based Audience</div>
+                <div class="stat-sub-label">Prime demo for U.S. brands &amp; hospitality</div>
+                <div class="stat-bar">
+                    <div class="stat-bar-fill" style="width:62%"></div>
+                </div>
+            </div>
+            <div class="stat-card" data-animate="fade-up" data-delay="300">
+                <div class="stat-icon">🚶</div>
+                <div class="stat-number" data-target="40" data-suffix="%">0</div>
+                <div class="stat-label">Avg. Restaurant Foot Traffic Lift</div>
+                <div class="stat-sub-label">Post-review conversion rate, partner venues</div>
+                <div class="stat-bar">
+                    <div class="stat-bar-fill bar-gold" style="width:74%"></div>
+                </div>
+            </div>
+            <div class="stat-card" data-animate="fade-up" data-delay="400">
+                <div class="stat-icon">❤️</div>
+                <div class="stat-number" data-target="12" data-suffix="%">0</div>
+                <div class="stat-label">Avg. Engagement Rate</div>
+                <div class="stat-sub-label">Industry avg is 1–3% — Pierre runs 12%</div>
+                <div class="stat-bar">
+                    <div class="stat-bar-fill" style="width:88%"></div>
+                </div>
+            </div>
+            <div class="stat-card" data-animate="fade-up" data-delay="500">
+                <div class="stat-icon">📍</div>
+                <div class="stat-number" data-target="400" data-suffix="+">0</div>
+                <div class="stat-label">Venues &amp; Destinations Reviewed</div>
+                <div class="stat-sub-label">Food · Hotels · Nightlife · Travel</div>
+                <div class="stat-bar">
+                    <div class="stat-bar-fill bar-gold" style="width:70%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Media Kit sub-section -->
+        <div class="media-kit-panel" data-animate="fade-up">
+            <div class="media-kit-header">
+                <div class="media-kit-title-row">
+                    <h3 class="media-kit-title">LIVE MEDIA KIT</h3>
+                    <span class="live-pill">
+                        <span class="dot pulse-red"></span>
+                        LIVE DATA
+                    </span>
+                </div>
+                <p class="media-kit-sub">Top geographic markets &amp; audience intelligence for brand planning.</p>
+            </div>
+
+            <div class="media-kit-body">
+                <!-- Geography table -->
+                <div class="geo-table-wrap">
+                    <table class="geo-table">
+                        <thead>
+                            <tr>
+                                <th>Market</th>
+                                <th>Audience Share</th>
+                                <th>Signal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🇺🇸 United States</td>
+                                <td>
+                                    <div class="geo-bar-wrap">
+                                        <div class="geo-bar" style="width:62.5%"></div>
+                                        <span>62.5%</span>
+                                    </div>
+                                </td>
+                                <td><span class="geo-tag hot">Primary</span></td>
+                            </tr>
+                            <tr>
+                                <td>🇨🇦 Canada</td>
+                                <td>
+                                    <div class="geo-bar-wrap">
+                                        <div class="geo-bar" style="width:11%"></div>
+                                        <span>11.0%</span>
+                                    </div>
+                                </td>
+                                <td><span class="geo-tag strong">Strong</span></td>
+                            </tr>
+                            <tr>
+                                <td>🇬🇧 United Kingdom</td>
+                                <td>
+                                    <div class="geo-bar-wrap">
+                                        <div class="geo-bar" style="width:8%"></div>
+                                        <span>8.0%</span>
+                                    </div>
+                                </td>
+                                <td><span class="geo-tag strong">Strong</span></td>
+                            </tr>
+                            <tr>
+                                <td>🇳🇬 Nigeria</td>
+                                <td>
+                                    <div class="geo-bar-wrap">
+                                        <div class="geo-bar" style="width:6%"></div>
+                                        <span>6.0%</span>
+                                    </div>
+                                </td>
+                                <td><span class="geo-tag growing">Growing</span></td>
+                            </tr>
+                            <tr>
+                                <td>🌍 Rest of World</td>
+                                <td>
+                                    <div class="geo-bar-wrap">
+                                        <div class="geo-bar" style="width:12.5%"></div>
+                                        <span>12.5%</span>
+                                    </div>
+                                </td>
+                                <td><span class="geo-tag">Global</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Single Brand Inquiry CTA -->
+                <div class="media-kit-ctas">
+                    <div class="media-kit-cta-card media-kit-cta-solo">
+                        <div class="media-kit-cta-icon">🤝</div>
+                        <h4>Vibe-Check Partnership</h4>
+                        <p>Custom brand integration across food, travel, luxury stays &amp; nightlife verticals. One
+                            inquiry — direct access to Pierre.</p>
+                        <a href="#contact" class="btn-solid media-kit-btn">BOOK PARTNERSHIP →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ============================================================
+       SECTION 6 — BRAND PARTNERSHIPS
+  ============================================================ -->
+    <section id="partnerships" class="section partner-section">
+        <div class="partner-inner">
+            <div class="section-header" data-animate="fade-up">
+                <div class="section-tag">BRAND PARTNERSHIPS</div>
+                <h2 class="section-title">YOUR BRAND.<br />HIS <span class="accent-gold">MEGAPHONE.</span></h2>
+                <p class="section-sub">Food brands. Luxury hotels. Nightlife venues. Pierre converts audiences into
+                    customers — across every vertical he touches.</p>
+            </div>
+
+            <!-- Data callouts -->
+            <div class="partner-data-row" data-animate="fade-up">
+                <div class="partner-data-card">
+                    <div class="pdc-num accent-red">62.5%</div>
+                    <div class="pdc-label">US Audience</div>
+                </div>
+                <div class="partner-data-card">
+                    <div class="pdc-num accent-gold">12%</div>
+                    <div class="pdc-label">Engagement Rate</div>
+                </div>
+                <div class="partner-data-card">
+                    <div class="pdc-num accent-red">85%</div>
+                    <div class="pdc-label">18–34 Demo</div>
+                </div>
+                <div class="partner-data-card">
+                    <div class="pdc-num accent-gold">40%</div>
+                    <div class="pdc-label">Avg. Foot Traffic ↑</div>
+                </div>
+            </div>
+
+            <!-- Partner logos (illustrated) -->
+            <div class="partner-logos-section" data-animate="fade-up">
+                <div class="partner-logos-label">PAST &amp; CURRENT COLLABORATIONS</div>
+                <div class="partner-logos-grid">
+                    <div class="partner-logo-card">🍔 <span>Smash BRGR Co.</span></div>
+                    <div class="partner-logo-card">🌮 <span>Taqueria Fuego</span></div>
+                    <div class="partner-logo-card">� <span>The Ridgeline Cabins</span></div>
+                    <div class="partner-logo-card">� <span>Velvet Lounge NYC</span></div>
+                    <div class="partner-logo-card">🌴 <span>Coastline Resorts</span></div>
+                    <div class="partner-logo-card">☕ <span>Brew Culture Co.</span></div>
+                </div>
+                <div class="partner-verticals">
+                    <span class="partner-vertical-pill">🍽️ Culinary</span>
+                    <span class="partner-vertical-pill">🏨 Hospitality & Travel</span>
+                    <span class="partner-vertical-pill">🌙 Nightlife & Events</span>
+                    <span class="partner-vertical-pill">✈️ Luxury Experiences</span>
+                </div>
+            </div>
+
+            <!-- Case Studies -->
+            <div class="case-studies" data-animate="fade-up">
+                <div class="case-study-card">
+                    <div class="cs-tag">CASE STUDY</div>
+                    <div class="cs-brand">YAH SUH NYCE</div>
+                    <div class="cs-result">
+                        <span class="cs-metric accent-gold">+87%</span>
+                        <span class="cs-desc">foot traffic increase post-review</span>
+                    </div>
+                    <div class="cs-followers-lift">
+                        <span class="cs-lift-num">5K → 12K</span>
+                        <span class="cs-lift-label">followers after Pierre's videos</span>
+                    </div>
+                    <div class="cs-quote">"We had 5k followers before Pierre's videos; after, we grew to 12k."</div>
+                </div>
+                <div class="case-study-card">
+                    <div class="cs-tag">CASE STUDY</div>
+                    <div class="cs-brand">LEISURE LAKE RESORT</div>
+                    <div class="cs-result">
+                        <span class="cs-metric accent-red">2.1M</span>
+                        <span class="cs-desc">total impressions from the feature</span>
+                    </div>
+                    <div class="cs-followers-lift">
+                        <span class="cs-lift-num">📈 Immediate</span>
+                        <span class="cs-lift-label">surge in hotel bookings post-review</span>
+                    </div>
+                    <div class="cs-quote">"We saw a massive increase in hotel bookings immediately after his review."
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <div class="cs-tag">CASE STUDY</div>
+                    <div class="cs-brand">JUST RIDE WATERCRAFTS</div>
+                    <div class="cs-result">
+                        <span class="cs-metric accent-gold">8M+</span>
+                        <span class="cs-desc">Google views generated</span>
+                    </div>
+                    <div class="cs-followers-lift">
+                        <span class="cs-lift-num">🔍 #1</span>
+                        <span class="cs-lift-label">transformed digital footprint &amp; visibility</span>
+                    </div>
+                    <div class="cs-quote">"Pierre fundamentally transformed our digital footprint and Google
+                        visibility."</div>
+                </div>
+            </div>
+
+
+            <div class="partner-cta" data-animate="fade-up">
+                <a href="#contact" class="btn-solid">WORK WITH PIERRE →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION 7 — CONTACT / BOOKING
+  ============================================================ -->
+    <section id="contact" class="section contact-section">
+        <div class="contact-inner">
+            <div class="section-header" data-animate="fade-up">
+                <div class="section-tag">LET'S BUILD</div>
+                <h2 class="section-title">BOOK<br /><span class="accent-red">PIERRE REVIEWS.</span></h2>
+                <p class="section-sub">Brand deals, restaurant reviews, event appearances, and more.<br />Let's make
+                    something the internet won't stop talking about.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Form -->
+                <div class="contact-form-wrap" data-animate="fade-right">
+                    <form class="contact-form" id="bookingForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="f-name">Your Name*</label>
+                                <input type="text" id="f-name" name="name" placeholder="John Smith" required
+                                    autocomplete="name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="f-brand">Brand / Company*</label>
+                                <input type="text" id="f-brand" name="brand" placeholder="Smash BRGR Co." required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="f-email">Email Address*</label>
+                            <input type="email" id="f-email" name="email" placeholder="you@yourbrand.com" required
+                                autocomplete="email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="f-type">Collaboration Type*</label>
+                            <select id="f-type" name="type" required>
+                                <option value="" disabled selected>Select collaboration type</option>
+                                <option value="restaurant-review">Restaurant Review</option>
+                                <option value="cabin-hotel">Cabin / Hotel Feature</option>
+                                <option value="nightlife-event">Nightlife &amp; Event Appearance</option>
+                                <option value="luxury-vibe">Luxury Experience Vibe-Check</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="f-message">Tell Pierre about your vision*</label>
+                            <textarea id="f-message" name="message" rows="4"
+                                placeholder="What's the collab? What do you want the world to see? 🔥"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit" id="formSubmit">
+                            <span class="submit-text">SEND IT →</span>
+                            <span class="submit-loader" hidden>Sending...</span>
+                        </button>
+                        <div class="form-success" id="formSuccess" hidden>
+                            ✅ Message received! Pierre's team will hit you back within 24 hours.
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Right: Info -->
+                <div class="contact-info-wrap" data-animate="fade-left">
+                    <!-- Right: Info — Media Kit card removed; FIND PIERRE expanded to fill -->
+                    <div class="contact-socials">
+                        <div class="socials-label">FIND PIERRE</div>
+                        <div class="socials-row">
+                            <a href="https://www.instagram.com/iampierreporter/" target="_blank" rel="noopener"
+                                class="social-link" aria-label="Instagram">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
+                                    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+                                </svg>
+                                <span>@pierreporter</span>
+                            </a>
+                            <a href="https://www.tiktok.com/@pierreporterofficial/" target="_blank" rel="noopener"
+                                class="social-link" aria-label="TikTok">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.89a8.27 8.27 0 004.84 1.55V7a4.85 4.85 0 01-1.07-.31z" />
+                                </svg>
+                                <span>@pierreporter</span>
+                            </a>
+                            <a href="https://www.youtube.com/@PierrePorterOfficial/" target="_blank" rel="noopener"
+                                class="social-link" aria-label="YouTube">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                                <span>Pierre Porter</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-response-time">
+                        <span class="dot pulse-gold"></span>
+                        <span>Typical response: <strong>under 24 hours</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-logo">PIERRE PORTER<span class="accent-red">.</span></div>
+
+            <div class="footer-tagline">MR. OH LAWWDDD © 2026</div>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#videos">Videos</a>
+                <a href="#bio">Story</a>
+                <a href="#contact">Book</a>
+            </div>
+            <div class="footer-legal">All rights reserved. Built by the internet, for the internet.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
