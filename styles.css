@@ -2162,7 +2162,14 @@ body.shaking {
     justify-content: center;
   }
 
+  /* Scroll indicator sits absolutely at hero bottom — on mobile the hero
+     collapses to content height so it overlaps the CTA buttons. Hide it. */
+  .scroll-indicator {
+    display: none;
+  }
+
   .btn-3d-wrap {
+
     display: flex;
     flex-direction: column;
     align-items: center;
