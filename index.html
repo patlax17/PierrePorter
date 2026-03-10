@@ -7,15 +7,18 @@
     <title>PIERRE PORTER REVIEWS | MR. OH LAWD</title>
 
     <!-- SEO -->
-    <meta name="description" content="Official headquarters of Pierre Porter. High-energy reviews of cabins, hotels, amusement parks, nightlife, and culinary gems. Book your brand vibe-check today." />
-    <meta name="keywords" content="Lifestyle Critic, Cabin Reviews, Hotel Influencer, Nightlife Curator, Pierre Porter REVIEWS, Mr. Oh Lawd, Food Reviewer, Travel Creator" />
+    <meta name="description"
+        content="Official headquarters of Pierre Porter. High-energy reviews of cabins, hotels, amusement parks, nightlife, and culinary gems. Book your brand vibe-check today." />
+    <meta name="keywords"
+        content="Lifestyle Critic, Cabin Reviews, Hotel Influencer, Nightlife Curator, Pierre Porter REVIEWS, Mr. Oh Lawd, Food Reviewer, Travel Creator" />
     <meta name="author" content="Pierre Porter" />
 
     <!-- Open Graph / Link Preview -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://pierre-porter.vercel.app/" />
     <meta property="og:title" content="Pierre Porter REVIEWS | The Voice of Premium Experiences" />
-    <meta property="og:description" content="Viral Lifestyle Critic &amp; Culture Curator. From Hidden Cabins and Luxury Hotels to Nightlife and Elite Culinary Finds." />
+    <meta property="og:description"
+        content="Viral Lifestyle Critic &amp; Culture Curator. From Hidden Cabins and Luxury Hotels to Nightlife and Elite Culinary Finds." />
     <meta property="og:image" content="https://pierre-porter.vercel.app/pierre-real.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -25,7 +28,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@iampierreporter" />
     <meta name="twitter:title" content="Pierre Porter REVIEWS | The Voice of Premium Experiences" />
-    <meta name="twitter:description" content="Viral Lifestyle Critic &amp; Culture Curator. From Hidden Cabins and Luxury Hotels to Nightlife and Elite Culinary Finds." />
+    <meta name="twitter:description"
+        content="Viral Lifestyle Critic &amp; Culture Curator. From Hidden Cabins and Luxury Hotels to Nightlife and Elite Culinary Finds." />
     <meta name="twitter:image" content="https://pierre-porter.vercel.app/pierre-real.jpg" />
 
     <!-- Browser / PWA Identity -->
@@ -676,6 +680,24 @@
                             <input type="email" id="f-email" name="email" placeholder="you@yourbrand.com" required
                                 autocomplete="email" />
                         </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="f-phone">Contact Number</label>
+                                <input type="tel" id="f-phone" name="phone" placeholder="+1 (212) 555-0100"
+                                    autocomplete="tel" />
+                            </div>
+                            <div class="form-group">
+                                <label for="f-calltime">Best Time for Call</label>
+                                <select id="f-calltime" name="calltime">
+                                    <option value="" disabled selected>Select a time window</option>
+                                    <option value="morning">Morning (9am – 12pm)</option>
+                                    <option value="afternoon">Afternoon (12pm – 4pm)</option>
+                                    <option value="evening">Evening (4pm – 7pm)</option>
+                                    <option value="anytime">Anytime</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <label for="f-type">Collaboration Type*</label>
                             <select id="f-type" name="type" required>
