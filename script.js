@@ -158,12 +158,29 @@ if (form) {
     submitText.hidden = true;
     submitLoader.hidden = false;
 
-    // Simulate async submission (replace with real API endpoint / Vercel function)
-    await new Promise(r => setTimeout(r, 1400));
+    // Real API submission
+    try {
+      const formData = new FormData(form);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
 
-    submitBtn.hidden = true;
-    formSuccess.hidden = false;
-    form.reset();
+      if (response.ok) {
+        submitBtn.hidden = true;
+        formSuccess.hidden = false;
+        form.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Oops! Something went wrong. Please try again or reach out on Instagram.');
+      submitBtn.disabled = false;
+      submitText.hidden = false;
+      submitLoader.hidden = true;
+      return;
+    }
 
     // Celebratory confetti
     if (window.confetti) {
