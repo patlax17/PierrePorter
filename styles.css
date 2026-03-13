@@ -1844,6 +1844,21 @@ body.shaking {
   padding-right: 40px;
 }
 
+.form-group select optgroup {
+  background: var(--charcoal-2);
+  color: var(--gold);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.form-group select option {
+  background: var(--charcoal-3);
+  color: var(--white);
+  padding: 10px;
+}
+
 .form-submit {
   background: var(--red-bright);
   color: var(--white);
