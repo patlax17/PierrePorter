@@ -84,33 +84,47 @@ function animateCounter(card) {
 }
 
 
-/* ============================================================
-   VIDEO CARD — click to simulate playback
-============================================================ */
-document.querySelectorAll('.video-card').forEach(card => {
-  card.addEventListener('click', () => {
-    // Simulate play with a brief visual flash
-    card.style.boxShadow = '0 0 60px rgba(255,34,34,0.5)';
-    setTimeout(() => { card.style.boxShadow = ''; }, 500);
-  });
-});
 
 /* ============================================================
-   AUTOPLAY-ON-SCROLL indicator for video cards
+   REEL DEAL — Lazy-load + autoplay on scroll
+   Strategy: videos start with preload="none" so they don't
+   all download at page load. The observer swaps to "auto"
+   and calls play() only when the card enters the viewport.
 ============================================================ */
-const videoObserver = new IntersectionObserver((entries) => {
+const reelVideos = document.querySelectorAll('.reel-video');
+
+// Kill preload on all videos at JS-init so browser doesn't eagerly fetch
+reelVideos.forEach(vid => { vid.preload = 'none'; });
+
+const reelObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    const thumb = entry.target.querySelector('.video-thumb');
-    if (!thumb) return;
+    const vid = entry.target;
     if (entry.isIntersecting) {
-      thumb.style.filter = 'brightness(1)';
+      // Kick off load if not already started
+      if (vid.preload === 'none') {
+        vid.preload = 'auto';
+        vid.load();
+      }
+      vid.play().catch(() => {});
     } else {
-      thumb.style.filter = 'brightness(0.6)';
+      vid.pause();
     }
   });
-}, { threshold: 0.6 });
+}, { threshold: 0.35, rootMargin: '100px 0px' }); // preload slightly early
 
-document.querySelectorAll('.video-card').forEach(c => videoObserver.observe(c));
+reelVideos.forEach(vid => {
+  reelObserver.observe(vid);
+
+  // Desktop hover: make sure it's loaded & playing
+  const card = vid.closest('.reel-card');
+  if (card) {
+    card.addEventListener('mouseenter', () => {
+      if (vid.preload === 'none') { vid.preload = 'auto'; vid.load(); }
+      vid.play().catch(() => {});
+    });
+  }
+});
+
 
 /* ============================================================
    CONTACT FORM

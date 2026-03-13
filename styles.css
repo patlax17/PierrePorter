@@ -745,246 +745,148 @@ body.shaking {
 }
 
 /* ============================================================
-   THE REEL DEAL v5 — Borderless Clip Grid
-   Strategy: iframe is taller than container + offset upward to
-   push Instagram's ~54px header & ~110px footer chrome
-   outside the overflow:hidden clip box. Only raw video shows.
+   THE REEL DEAL v6 — Native Video Cards
+   No iframes. No grey borders. Just raw MP4 cards.
+   Click-through opens the Instagram reel in a new tab.
 ============================================================ */
 .videos-section {
   background: var(--black);
 }
 
 .reel-grid {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 /* ── Card shell ── */
 .reel-card {
   position: relative;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  /* catches any scale bleed during hover */
-  display: flex;
-  flex-direction: column;
-  background: var(--charcoal-2);
+  background: #0d0d0d;
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
-  transform-origin: top center;
-  /* scale from top so video doesn't pull down */
 }
 
 .reel-card:hover {
-  transform: translateY(-4px) scale(1.03);
-  /* subtle scale, no excessive bleed */
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+  transform: translateY(-6px);
+  box-shadow: 0 28px 64px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
-/* ── THE GUILLOTINE CROP ── */
-/* clip-path: inset(0% 0% 22% 0%) physically deletes the bottom 22%        */
-/* of the container — where the white Instagram footer lives.               */
-.reel-embed-box {
-  position: relative;
-  width: 100%;
-  height: 580px;
-  overflow: hidden;
-  border-radius: 8px 8px 0 0;
-  background: #0a0a0a;
-  clip-path: inset(0% 0% 22% 0%);
-  -webkit-clip-path: inset(0% 0% 22% 0%);
-}
-
-/* iframe: 120% height fills the clipped area, margin-top kills the header */
-.reel-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120%;
-  margin-top: -35px;
-  border: none;
-  pointer-events: none;
-  display: block;
-}
-
-/* Thin mask at the crop edge — softens the hard cut */
-.reel-mask {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  z-index: 10;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
-  pointer-events: none;
-}
-
-/* Click layer covers the iframe */
-.reel-tap-layer {
-  position: absolute;
-  inset: 0;
-  z-index: 12;
-  background: transparent;
-  cursor: pointer;
-}
-
-/* Caption bar — child of .reel-card (NOT embed-box) so it's OUTSIDE the crop */
-.reel-cap-bar {
-  position: relative;
-  padding: 10px 14px 8px;
-  display: flex;
-  background: var(--charcoal-2);
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 0 0 8px 8px;
-  min-height: 70px;
-}
-
-.reel-cap-text {
-  font-family: var(--font-display);
-  font-size: 13px;
-  letter-spacing: 0.3px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.4;
-  margin: 0;
-}
-
-.reel-hashtag {
-  color: var(--gold);
-  font-weight: 700;
-}
-
-/* ── Top Banner — safety-overlapped black mask ── */
-/* top: -5px + height: 55px = starts ABOVE container edge so hover scale  */
-/* can never expose the Instagram header strip underneath.                 */
-.reel-top-banner {
-  position: absolute;
-  top: -5px;
-  left: 0;
-  right: 0;
-  /* -5px safety overhang above clip edge */
-  height: 55px;
-  background: #000000;
-  z-index: 50 !important;
-  /* above iframe, above everything */
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 0 12px 8px;
-  pointer-events: none;
-}
-
-.reel-banner-tag {
-  font-family: var(--font-ui);
-  font-size: 9px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 700;
-}
-
-
-
-
-
-
-
-
-/* Atmospheric glow layer */
-.reel-poster-glow {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-/* Large emoji centerpiece */
-.reel-poster-visual {
-  font-size: 72px;
-  line-height: 1;
-  filter: drop-shadow(0 0 24px rgba(0, 0, 0, 0.6));
-  transition: transform 0.35s ease;
-  position: relative;
-  z-index: 1;
-}
-
-.reel-card:hover .reel-poster-visual {
-  transform: scale(1.12) translateY(-8px);
-}
-
-/* Animated play button */
-.reel-play-btn {
-  width: 56px;
-  height: 56px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  margin-top: 20px;
-  position: relative;
-  z-index: 1;
-  transition: background 0.25s, transform 0.25s, border-color 0.25s;
-}
-
-.reel-card:hover .reel-play-btn {
-  background: var(--red-bright);
-  border-color: var(--red-bright);
-  transform: scale(1.15);
-}
-
-/* Gold caption bar — locked to bottom, always visible */
-.reel-poster-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  padding: 28px 14px 14px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 60%, transparent 100%);
+/* Full-width anchor wrapping video + cap */
+.reel-video-link {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
 }
 
-/* ── Responsive ── */
-@media (max-width: 900px) {
-  .reel-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* ── Video box ── */
+.reel-video-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #0a0a0a;
+  border-radius: 12px 12px 0 0;
 }
 
-@media (max-width: 540px) {
-  .reel-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
-  }
+.reel-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.reel-card:hover .reel-video {
+  transform: scale(1.04);
+}
+
+/* Dark gradient overlay — bottom to top */
+.reel-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+  transition: background 0.3s ease;
+}
+
+.reel-card:hover .reel-video-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+/* Instagram hover CTA — centered, fades in on hover */
+.reel-play-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.reel-card:hover .reel-play-overlay {
+  opacity: 1;
+}
+
+.reel-ig-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50px;
+  padding: 14px 24px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--white);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.reel-card:hover .reel-ig-btn {
+  background: rgba(232, 28, 28, 0.85);
+  border-color: rgba(232, 28, 28, 0.6);
+  transform: scale(1.04);
+}
 
 /* ── Badges ── */
 .reel-badge {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
+  top: 14px;
+  left: 14px;
+  z-index: 12;
   font-family: var(--font-ui);
   font-size: 10px;
   letter-spacing: 1.5px;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 50px;
   text-transform: uppercase;
   pointer-events: none;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
 }
 
 .reel-badge.trending {
@@ -1024,54 +926,81 @@ body.shaking {
 }
 
 @keyframes badgePulse {
-
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(232, 28, 28, 0.5);
-  }
-
-  50% {
-    box-shadow: 0 0 0 6px rgba(232, 28, 28, 0);
-  }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 28, 28, 0.5); }
+  50%       { box-shadow: 0 0 0 6px rgba(232, 28, 28, 0); }
 }
 
-/* ── Footer bar (below clip-box) ── */
-.reel-footer {
+/* ── Caption bar ── */
+.reel-cap-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 14px;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #111111;
+  border-radius: 0 0 12px 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.25s;
+  flex-shrink: 0;
+}
+
+.reel-card:hover .reel-cap-bar {
+  background: #1a1a1a;
+}
+
+.reel-cap-text {
   font-family: var(--font-ui);
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--white-muted);
-  background: var(--charcoal-2);
-  border-top: 1px solid var(--charcoal-4);
-  border-radius: 0 0 8px 8px;
-  transition: color 0.2s, background 0.2s;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
 }
 
-.reel-card:hover .reel-footer {
-  color: var(--white);
-  background: var(--charcoal-3);
+.reel-hashtag {
+  color: var(--gold);
+  font-weight: 700;
 }
 
-.reel-footer-label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.reel-cap-arrow {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+  transition: color 0.25s, transform 0.25s;
+  line-height: 1;
 }
 
-.reel-footer-arrow {
-  opacity: 0.4;
-  transition: opacity 0.2s, transform 0.2s;
+.reel-card:hover .reel-cap-arrow {
+  color: var(--gold);
+  transform: translate(2px, -2px);
 }
 
-.reel-card:hover .reel-footer-arrow {
-  opacity: 1;
-  transform: translateX(3px);
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .reel-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
 }
+
+@media (max-width: 540px) {
+  .reel-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 /* ── CTAs ── */
 .reel-cta-row {
@@ -1089,20 +1018,7 @@ body.shaking {
   gap: 8px;
 }
 
-/* ── Responsive ── */
-@media (max-width: 900px) {
-  .reel-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 540px) {
-  .reel-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-}
 
 
 /* ============================================================
